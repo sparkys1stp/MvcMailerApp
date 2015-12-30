@@ -1,0 +1,2 @@
+# MvcMailerEmailApp
+MvcMailer code example
