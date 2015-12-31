@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Mail;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using EmailApp.Models;
+using EmailApp.Services;
 using Mvc.Mailer;
 
 namespace EmailApp.Controllers
@@ -16,9 +13,16 @@ namespace EmailApp.Controllers
             return View();
         }
 
-        public MvcMailMessage Send()
+        public MvcMailMessage Email(EmailMessageVM model)
         {
-         
+            model.FromEmail = "test@account.com";
+            model.Subject = "This is from our site";
+
+            var emailService = new EmailService();
+
+            emailService.SendEmail(model);
+
+            return null;
         }
     }
 }
