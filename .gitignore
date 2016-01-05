@@ -126,9 +126,6 @@ packages/*
 # This line needs to be after the ignore of the build folder (and the packages folder if the line above has been uncommented)
 !packages/build/
 
-#Rotativa
-#Pork.LMS.Web/Rotativa/*
-
 # Windows Azure Build Output
 csx/
 *.build.csdef
@@ -188,9 +185,6 @@ $RECYCLE.BIN/
 # Sitemap Files
 #*.xml
 #*.sitemap
-
-#PDF certs
-pork.lms.web/TestBlobs/*.pdf
 
 */Logs/*
 
